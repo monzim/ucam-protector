@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "version": "0.0.1",
+  "name": "UCAM Protector",
+  "description": "A privacy focused protection for your browser while you are in public places.",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "logo_extensions.png"
+  },
+  "icons": {
+    "16": "logo_extensions.png",
+    "48": "logo_extensions.png",
+    "128": "logo_extensions.png"
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["http://*.uiu.ac.bd/*", "https://*.uiu.ac.bd/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*.uiu.ac.bd/*", "https://*.uiu.ac.bd/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
