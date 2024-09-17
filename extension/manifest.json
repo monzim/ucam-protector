@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "UCAM Protector",
   "description": "A privacy focused protection for your browser while you are in public places.",
   "action": {
